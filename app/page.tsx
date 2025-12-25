@@ -1,13 +1,20 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import Image from "next/image";
 
+import Header from "@/components/ui/header";
+import banner from "@/public/banner.png";
 
 export default function Home() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
-    
-     <Button variant="destructive">FSW</Button>
-     <Input type="text" placeholder="Enter your name" />
+    <div>
+      <Header />
+      <div className="px-4">
+        <Image
+          src={banner}
+          alt="Agende com os melhores com a aparatus"
+          sizes="100vw"
+          className="h-auto w-full"
+        />
+      </div>
     </div>
   );
 }
